@@ -53,3 +53,6 @@ languages:
 - label: Greek
   iso-alpha2: gr
   path: /gr/
+- label: Nederlands
+  iso-alpha2: nl
+  path: /nl/
