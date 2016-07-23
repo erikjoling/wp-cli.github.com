@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Command line interface for WordPress
+title: Command-line-interface voor WordPress
 ---
 
-[WP-CLI](https://wp-cli.org/) is a set of command-line tools for managing [WordPress](https://wordpress.org/) installations. You can update plugins, configure multisite installs and much more, without using a web browser.
+[WP-CLI](https://wp-cli.org/) is een verzameling command-line tools voor het beheren van [WordPress](https://wordpress.org/) installaties. Je kunt plugins updaten, multisite configureren en veel meer, zonder een webbrowser te gebruiken.
 
-To stay up to date, follow [@wpcli on Twitter](https://twitter.com/wpcli) or [sign up for our email newsletter](http://wp-cli.us13.list-manage.com/subscribe?u=0615e4d18f213891fc000adfd&id=8c61d7641e).
+Om op de hoogte te blijven, volg [@wpcli op Twitter](https://twitter.com/wpcli) of [schrijf je in voor onze nieuwsbrief](http://wp-cli.us13.list-manage.com/subscribe?u=0615e4d18f213891fc000adfd&id=8c61d7641e).
 
 [![Build Status](https://travis-ci.org/wp-cli/wp-cli.png?branch=master)](https://travis-ci.org/wp-cli/wp-cli) [![Dependency Status](https://gemnasium.com/badges/github.com/wp-cli/wp-cli.svg)](https://gemnasium.com/github.com/wp-cli/wp-cli) [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/wp-cli/wp-cli.svg)](http://isitmaintained.com/project/wp-cli/wp-cli "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/wp-cli/wp-cli.svg)](http://isitmaintained.com/project/wp-cli/wp-cli "Percentage of issues still open")
 
