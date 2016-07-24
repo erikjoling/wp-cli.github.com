@@ -7,7 +7,7 @@ title: Command-line-interface voor WordPress
 
 Om op de hoogte te blijven, volg [@wpcli op Twitter](https://twitter.com/wpcli) of [schrijf je in voor onze nieuwsbrief](http://wp-cli.us13.list-manage.com/subscribe?u=0615e4d18f213891fc000adfd&id=8c61d7641e).
 
-[![Build Status](https://travis-ci.org/wp-cli/wp-cli.png?branch=master)](https://travis-ci.org/wp-cli/wp-cli) [![Dependency Status](https://gemnasium.com/badges/github.com/wp-cli/wp-cli.svg)](https://gemnasium.com/github.com/wp-cli/wp-cli) [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/wp-cli/wp-cli.svg)](http://isitmaintained.com/project/wp-cli/wp-cli "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/wp-cli/wp-cli.svg)](http://isitmaintained.com/project/wp-cli/wp-cli "Percentage of issues still open")
+[![Build Status](https://travis-ci.org/wp-cli/wp-cli.png?branch=master)](https://travis-ci.org/wp-cli/wp-cli) [![Afhankelijkheid Status](https://gemnasium.com/badges/github.com/wp-cli/wp-cli.svg)](https://gemnasium.com/github.com/wp-cli/wp-cli) [![Gemiddelde tijd om een issue op te lossen](http://isitmaintained.com/badge/resolution/wp-cli/wp-cli.svg)](http://isitmaintained.com/project/wp-cli/wp-cli "Gemiddelde tijd om een issue op te lossen") [![Percentage issues die nog open zijn](http://isitmaintained.com/badge/open/wp-cli/wp-cli.svg)](http://isitmaintained.com/project/wp-cli/wp-cli "Percentage issues die nog open zijn")
 
 <div style="
 	border: 1px solid #7AD03A;
@@ -17,14 +17,14 @@ Om op de hoogte te blijven, volg [@wpcli op Twitter](https://twitter.com/wpcli) 
 	padding-left: 10px;
 	padding-right: 10px;
 ">
-	<p><strong>A more RESTful WP-CLI</strong> aims to unlocking the potential of the WP REST API at the command line. Project backed by Pressed, Chris Lema, Human Made, Pagely, Pantheon and many others. <a href="https://wp-cli.org/restful/">Learn more &rarr;</a></p>
+	<p><strong>A more RESTful WP-CLI</strong> streeft ernaar het potentieel van de WP REST API op de command line te benutten. Het project wordt gesteund door Pressed, Chris Lema, Human Made, Pagely, Pantheon en veel anderen. <a href="https://wp-cli.org/restful/">Meer leren &rarr;</a></p>
 </div>
 
-Quick links: [Using](#using) &#124; [Installing](#installing) &#124; [Support](#support) &#124; [Extending](#extending) &#124; [Contributing](#contributing) &#124; [Credits](#credits)
+Spring direct naar: [Gebruik](#gebruik) &#124; [Installeren](#installeren) &#124; [Support](#support) &#124; [Uitbreiden](#uitbreiden) &#124; [Bijdragen](#bijdragen) &#124; [Credits](#credits)
 
-## Using
+## Gebruik
 
-WP-CLI's goal is to provide a command-line interface for any action you might want to perform in the WordPress admin. For instance, `wp plugin install --activate` ([doc](https://wp-cli.org/commands/plugin/install/)) lets you install and activate a WordPress plugin:
+Het doel van WP-CLI is het bieden van een command-line-interface voor elke handeling die je zou willen uitvoeren in de WordPress admin. Met `wp plugin install --activate` ([doc](https://wp-cli.org/commands/plugin/install/)) kan je bijvoorbeeld een WordPress plugin installeren en activeren:
 
 ```
 $ wp plugin install rest-api --activate
@@ -37,47 +37,47 @@ Activating 'rest-api'...
 Success: Plugin 'rest-api' activated.
 ```
 
-WP-CLI also includes commands for many things you can't do in the WordPress admin. For example, `wp transient delete-all` ([doc](https://wp-cli.org/commands/transient/delete-all/)) lets you delete one or all transients:
+Met WP-CLI kun je ook opdrachten uitvoeren die niet mogelijk zijn in de WordPress admin. Met `wp transient delete-all` ([doc](https://wp-cli.org/commands/transient/delete-all/)) kun je bijvoorbeeld één of alle transients verwijderen:
 
 ```
 $ wp transient delete-all
 Success: 34 transients deleted from the database.
 ```
 
-For a more complete introduction to using WP-CLI, read the [Quick Start guide](https://wp-cli.org/docs/quick-start/).
+Voor een uitgebreidere introductie over hoe WP-CLI te gebruiken, lees [Quick Start guide](https://wp-cli.org/docs/quick-start/).
 
-Already feel comfortable with the basics? Jump into the [complete list of commands](https://wp-cli.org/commands/) for detailed information on managing themes and plugins, importing and exporting data, performing database search-replace operations and more.
+Voel je je al vertrouwd met de basis? Ga dan naar de [complete lijst van opdrachten](https://wp-cli.org/commands/) voor meer details over het beheren van thema's en plugins, het importeren en exporteren van data, het uitvoeren van database zoek-en-vervang taken en meer.
 
-## Installing
+## Installeren
 
-Downloading the Phar file is our recommended installation method. Should you need, see also our documentation on [alternative installation methods](https://wp-cli.org/docs/installing/).
+Het downloaden van het Phar bestand is onze aangeraden installatiemethode. Mocht het nodig zijn, dan kun je ook onze documentatie lezen over [alternatieve installatiemethodes](https://wp-cli.org/docs/installing/).
 
-Before installing WP-CLI, please make sure your environment meets the minimum requirements:
+Voordat je WP-CLI installeert, zorg er eerst voor dat je omgeving voldoet aan de minimum eisen:
 
-- UNIX-like environment (OS X, Linux, FreeBSD, Cygwin); limited support in Windows environment
-- PHP 5.3.29 or later
-- WordPress 3.7 or later
+- UNIX-achtige omgeving (OS X, Linux, FreeBSD, Cygwin); beperkte ondersteuning in Windows omgeving
+- PHP 5.3.29 of hoger
+- WordPress 3.7 of hoger
 
-Once you've verified requirements, download the [wp-cli.phar](https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli.phar) file using `wget` or `curl`:
+Als je voldoet aan de eisen kun je het [wp-cli.phar](https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli.phar) bestand downloaden via `wget` of `curl`: 
 
 ```
 $ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 ```
 
-Next, check if it is working:
+Vervolgens kijk je of het werkt:
 
 ```
 $ php wp-cli.phar --info
 ```
 
-To use WP-CLI from the command line by typing `wp`, make the file executable and move it to somewhere in your PATH. For example:
+Om WP-CLI vanaf de command-line te kunnen gebruiken door `wp` te typen, maak je het bestand uitvoerbaar en zet het ergens in je PATH. Bijvoorbeeld:
 
 ```
 $ chmod +x wp-cli.phar
 $ sudo mv wp-cli.phar /usr/local/bin/wp
 ```
 
-If WP-CLI was installed successfully, you should see something like this when you run `wp --info`:
+Als WP-CLI goed is geïnstalleerd zou je ongeveer het volgende moeten zien wanneer je `wp --info` uitvoert`:
 
 ```
 $ wp --info
@@ -91,43 +91,43 @@ WP-CLI project config:
 WP-CLI version: 0.23.0
 ```
 
-### Updating
+### Bijwerken
 
-You can update WP-CLI with `wp cli update` ([doc](https://wp-cli.org/commands/cli/update/)), or by repeating the installation steps.
+Je kunt WP-CLI bijwerken met `wp cli update` ([doc](https://wp-cli.org/commands/cli/update/)), of door de installatie opnieuw uit te voeren.
 
-Want to live life on the edge? Run `wp cli update --nightly` to use the latest nightly build of WP-CLI. The nightly build is more or less stable enough for you to use in your development environment, and always includes the latest and greatest WP-CLI features.
+Ben je in een avontuurlijke bui? Voer dan `wp cli update --nightly` uit om de meest recente nightly build van WP-CLI binnen te halen. De nightly build is min of meer stabiel genoeg om te gebruiken in je ontwikkelomgeving en bevat de nieuwste en tofste WP-CLI features.
 
-### Tab completions
+### Tab-aanvulling
 
-WP-CLI also comes with a tab completion script for Bash and ZSH. Just download [wp-completion.bash](https://github.com/wp-cli/wp-cli/raw/master/utils/wp-completion.bash) and source it from `~/.bash_profile`:
+WP-CLI wordt ook geleverd met een tab-aanvullingsscript voor Bash en ZSH. Download eenvoudig [wp-completion.bash](https://github.com/wp-cli/wp-cli/raw/master/utils/wp-completion.bash) en verwijs ernaar in je `~/.bash_profile`:
 
 ```
 source /FULL/PATH/TO/wp-completion.bash
 ```
 
-Don't forget to run `source ~/.bash_profile` afterwards.
+Vergeet naderhand niet om `source ~/.bash_profile` uit te voeren.
 
 ## Support
 
-WP-CLI's maintainers and project contributors do their best to respond to all new issues in a timely manner. To make the best use of their volunteered time, please first see if there may be an answer to your question in one of the following resources:
+De beheerders en bijdragers van WP-CLI doen hun best tijdelijk te reageren op alle nieuwe issues. Om optimaal gebruik te maken van hun vrijwillige inspanningen, kijk eerst of er eventueel een antwoord is op je vraag in één van de volgende bronnen:
 
-- [Common issues and their fixes](https://wp-cli.org/docs/common-issues/)
-- [Best practices for submitting a bug report](https://wp-cli.org/docs/bug-reports/)
-- [Documentation portal](https://wp-cli.org/docs/)
-- [Open or closed issues on Github](https://github.com/wp-cli/wp-cli/issues?utf8=%E2%9C%93&q=is%3Aissue)
+- [Veel voorkomende problemen en hun oplossingen](https://wp-cli.org/docs/common-issues/)
+- [Hoe dien ik een bug rapport in](https://wp-cli.org/docs/bug-reports/)
+- [Documentatieportaal](https://wp-cli.org/docs/)
+- [Open of gesloten issues op GitHub](https://github.com/wp-cli/wp-cli/issues?utf8=%E2%9C%93&q=is%3Aissue)
 - [WordPress StackExchange forums](http://wordpress.stackexchange.com/questions/tagged/wp-cli)
 
-If you can't find your answer in one of those existing resources, feel free to [create an issue](https://github.com/wp-cli/wp-cli/issues/new) with your question.
+Als je antwoord niet tussen één van de bestaande bronnen staat, voel je dan vrij [een issue aan te maken](https://github.com/wp-cli/wp-cli/issues/new) met je vraag.
 
-Please do not ask support questions on Twitter. Twitter isn't an acceptable venue for support because: 1) it's hard to hold conversations in under 140 characters, and 2) Twitter isn't a place where someone with your same question can search for an answer in a prior conversation.
+Stel je vragen alsjeblieft niet via Twitter. Twitter is geen geschikt kanaal voor ondersteuning omdat: 1) het lastig is om gesprekken te voeren van minder dan 140 karakters, en 2) op Twitter kunnen mensen met eenzelfde vraag het antwoord niet zoeken in eerder gevoerde gesprekken.
 
-If you have a WordPress.org account, you may also consider joining the `#cli` channel on the [WordPress.org Slack organization](https://make.wordpress.org/chat/).
+Als je een WordPress.org account hebt kun je ook overwegen deel te nemen aan het `#cli` kanaal op [WordPress.org Slack organization](https://make.wordpress.org/chat/).
 
-## Extending
+## Uitbreiden
 
-A **command** is an atomic unit of WP-CLI functionality. `wp plugin install` ([doc](https://wp-cli.org/commands/plugin/install/)) is one command. `wp plugin activate` ([doc](https://wp-cli.org/commands/plugin/activate/)) is another.
+Een **opdracht** is een atoom in de WP-CLI functionaliteit. `wp plugin install` ([doc](https://wp-cli.org/commands/plugin/install/)) is één opdracht. `wp plugin activate` ([doc](https://wp-cli.org/commands/plugin/activate/)) een andere.
 
-WP-CLI supports registering any callable class, function, or closure as a command. It reads usage details from the callback's PHPdoc. `WP_CLI::add_command()` ([doc](https://wp-cli.org/docs/internal-api/wp-cli-add-command/)) is used for both internal and third-party command registration.
+WP-CLI ondersteunt het registreren van elke aanroepbare class, functie of closure als een opdracht. Gebruiksdetails worden gelezen van de callbacks PHPdoc. `WP_CLI::add_command()` ([doc](https://wp-cli.org/docs/internal-api/wp-cli-add-command/)) wordt gebruikt voor registreren van opdrachten, zowel intern als voor third-party doeleinden. 
 
 ```
 /**
@@ -157,36 +157,36 @@ $delete_option_cmd = function( $args ) {
 WP_CLI::add_command( 'option delete', $delete_option_cmd );
 ```
 
-WP-CLI comes with dozens of commands. It's easier than it looks to create a custom WP-CLI command. Read the [commands cookbook](https://wp-cli.org/docs/commands-cookbook/) to learn more. Browse the [internal API docs](https://wp-cli.org/docs/internal-api/) to discover a variety of helpful functions you can use in your custom WP-CLI command.
+WP-CLI omvat een groot aantal opdrachten. Het is makkelijker dan het er uit ziet een custom WP-CLI opdracht aan te maken. Lees het [commando kookboek](https://wp-cli.org/docs/commands-cookbook/) om er meer over te leren. Browse de [interne API docs](https://wp-cli.org/docs/internal-api/) om een verscheidenheid aan nuttige functies te ontdekken die je kan gebruiken in je custom WP-CLI opdracht.
 
-## Contributing
+## Bijdragen
 
-Welcome and thanks!
+Welkom en bedankt!
 
-We appreciate you taking the initiative to contribute to WP-CLI. It’s because of you, and the community around you, that WP-CLI is such a great project.
+Wij waarderen het dat je initiatief toont bij te dragen aan WP-CLI. Het is dankzij jou, en de gemeenschap om jou heen, dat WP-CLI zo'n geweldig project is.
 
-**Contributing isn’t limited to just code.** We encourage you to contribute in the way that best fits your abilities, by writing tutorials, giving a demo at your local meetup, helping other users with their support questions, or revising our documentation.
+**Bijdragen is niet beperkt tot code.** Wij moedigen je aan bij te dragen op een manier die het beste bij je vaardigheden past; tutorials schrijven, een demo geven bij een lokale meetup, andere helpen met support vragen, of het herschrijven van onze documentatie.
 
-Please take a moment to [read these guidelines at depth](https://wp-cli.org/docs/contributing/). Following them helps to communicate that you respect the time of the other contributors to the project. In turn, they’ll do their best to reciprocate that respect when working with you, across timezones and around the world.
+Neem even de tijd om [de richtlijnen goed door te nemen](https://wp-cli.org/docs/contributing/). Het volgen van de richtlijnen helpt communiceren dat je de tijd van andere bijdragers aan het project respecteert. Omgekeerd zullen zij ook hun best doen dit respecteren wanneer ze met je werken, in verschillende tijdzones en over de hele wereld.
 
-## Leadership
+## Leiderschap
 
-WP-CLI is led by these individuals:
+WP-CLI wordt geleid door deze individuen:
 
-* [Daniel Bachhuber](https://github.com/danielbachhuber/) - current maintainer
-* [Cristi Burcă](https://github.com/scribu) - previous maintainer
-* [Andreas Creten](https://github.com/andreascreten) - founder
+* [Daniel Bachhuber](https://github.com/danielbachhuber/) - huidige beheerder
+* [Cristi Burcă](https://github.com/scribu) - vorige beheerder
+* [Andreas Creten](https://github.com/andreascreten) - oprichter
 
-Read more about the project's [governance](https://wp-cli.org/docs/governance/) and view a [complete list of contributors](https://github.com/wp-cli/wp-cli/contributors).
+Lees meer over het [projectbeleid](https://wp-cli.org/docs/governance/) en bekijk een [volledige lijst bijdragers](https://github.com/wp-cli/wp-cli/contributors).
 
 ## Credits
 
-Besides the libraries defined in [composer.json](composer.json), we have used code or ideas from the following projects:
+Naast de bibliotheken gedefinieerd in [composer.json](composer.json) hebben we code of ideeën gebruikt van de volgende projecten: 
 
-* [Drush](http://drush.ws/) for... a lot of things
-* [wpshell](http://code.trac.wordpress.org/browser/wpshell) for `wp shell`
-* [Regenerate Thumbnails](http://wordpress.org/plugins/regenerate-thumbnails/) for `wp media regenerate`
-* [Search-Replace-DB](https://github.com/interconnectit/Search-Replace-DB) for `wp search-replace`
-* [WordPress-CLI-Exporter](https://github.com/Automattic/WordPress-CLI-Exporter) for `wp export`
-* [WordPress-CLI-Importer](https://github.com/Automattic/WordPress-CLI-Importer) for `wp import`
-* [wordpress-plugin-tests](https://github.com/benbalter/wordpress-plugin-tests/) for `wp scaffold plugin-tests`
+* [Drush](http://drush.ws/) voor... veel dingen
+* [wpshell](http://code.trac.wordpress.org/browser/wpshell) voor `wp shell`
+* [Regenerate Thumbnails](http://wordpress.org/plugins/regenerate-thumbnails/) voor `wp media regenerate`
+* [Search-Replace-DB](https://github.com/interconnectit/Search-Replace-DB) voor `wp search-replace`
+* [WordPress-CLI-Exporter](https://github.com/Automattic/WordPress-CLI-Exporter) voor `wp export`
+* [WordPress-CLI-Importer](https://github.com/Automattic/WordPress-CLI-Importer) voor `wp import`
+* [wordpress-plugin-tests](https://github.com/benbalter/wordpress-plugin-tests/) voor `wp scaffold plugin-tests`
